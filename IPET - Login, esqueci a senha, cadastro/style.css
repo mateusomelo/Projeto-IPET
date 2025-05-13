@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: 'Lalezar', Arial, sans-serif;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #5598C1;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Responsividade opcional para telas menores */
+@media (max-width: 400px) {
+  .login-container {
+    padding: 20px;
+  }
+}
+
+.login-container h1 {
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Destaque para campo em foco */
+input:focus {
+  border-color: #5598C1;
+  box-shadow: 0 0 3px #5598C1;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #000000;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #a5aeb4;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.floating-label label {
+  position: absolute;
+  top: -12px;
+  left: -2px;
+  color: #ffffff;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: #5598C1;
+  padding: 0 4px;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 8px;
+  color: #5598C1;
+  font-size: 12px;
+}
+
+.social-login button span {
+  flex: 1;
+  text-align: center;
+}
+
+.login-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.divider {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.divider span {
+  background: #5598C1;
+  padding: 0 10px;
+  color: #000000;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #000000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+}
+
+.social-login button {
+  width: 80%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+/* Efeito suave ao passar o mouse nos botões sociais */
+.social-login button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.social-login button img {
+  width: 24px;
+  height: 24px;
+}
+
+.google-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ddd;
+}
+
+.apple-btn {
+  background-color: #000000;
+  color: white;
+}
+
+.facebook-btn {
+  background-color: #1877F2;
+  color: white;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Petshop Parceiros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="status-bar"></div>
+
+<header class="top-bar">
+  <p class="greeting">Olá, <strong>(nome)</strong></p>
+  <a href="/IPET - Minha conta (Menu, Mensagens...)/menu.html" class="menu-icon" onclick="carregarMenu()">&#9776;</a>
+</header>
+
+<section class="info-area">
+  <div class="location">
+    <span class="icon">📍</span>
+    <div class="city-info">
+      <span>Pets em:</span><br>
+      <strong>São Paulo</strong>
+    </div>
+  </div>
+  <a href="pagina-destino.html" class="select-btn">Selecione o Petshop</a>
+</section>
+
+  <div id="menu-container"></div>
+
+  <main>
+    <section class="intro">
+      <p>Produtos com descontos exclusivos de<br> nossos petshops parceiros.</p>
+    </section>
+
+    <section class="product">
+      <img src="img/confort-pads.png" alt="Confort Pads">
+      <p><strong>CONFORT PADS</strong> Tapete Higiênico (60X55) 07 Und</p>
+    </section>
+
+    <section class="product">
+      <img src="img/roupinhas.png" alt="Roupinhas">
+      <p><strong>Kit C/3</strong> Roupinhas Soft Inverno Para Cachorro Pequeno Medio</p>
+    </section>
+
+    <section class="product">
+      <img src="img/coleira.png" alt="Coleira">
+      <p><strong>Coleira Peitoral</strong> Para Cachorro Pet Colete Refletivo + Guia Maviquec</p>
+    </section>
+  </main>
+
+  
+  <script>
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      console.log("Você está usando um celular.");
+      document.body.classList.add("mobile");
+    } else {
+      console.log("Você está usando um computador.");
+      document.body.classList.add("desktop");
+    }
+  </script>
+
+  <script>
+  function carregarMenu() {
+    fetch("/IPET - Minha conta (Menu, Mensagens...)/menu.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("menu-container").innerHTML = data;
+      })
+      .catch(error => {
+        console.error("Erro ao carregar o menu:", error);
+      });
+  }
+</script>
+</body>
+</html>
