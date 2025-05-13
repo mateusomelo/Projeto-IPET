@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu IPET</title>
+  <link rel="stylesheet" href="cliente3.css">
+  <link href="https://unpkg.com/lucide-static@0.304.0/icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+
+      <div class="header">
+        <button class="back-button" onclick="history.back()">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <div class="title-chat">
+          <div class="title-conversa">CHAT</div>
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <!-- As mensagens entram aqui -->
+      </div>
+
+      <div class="chat-input-container">
+        <select id="sender-select" class="sender-select">
+          <option value="client">Cliente</option>
+          <option value="ipet">IPET</option>
+        </select>
+
+        <input type="text" id="message-input" placeholder="Digite sua mensagem..." class="chat-input" />
+        <button class="send-button" onclick="sendMessage()">
+          <i data-lucide="send"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    function sendMessage() {
+      const input = document.getElementById("message-input");
+      const sender = document.getElementById("sender-select").value;
+      const text = input.value.trim();
+      if (!text) return;
+
+      const chat = document.getElementById("chat-messages");
+
+      const messageBox = document.createElement("div");
+      messageBox.className = `message-box ${sender}`;
+
+      const avatar = document.createElement("div");
+      avatar.className = "avatar";
+      avatar.innerHTML = sender === "client" ? "C3" : `<img src="https://cdn-icons-png.flaticon.com/512/1373/1373255.png">`;
+
+      const messageContent = document.createElement("div");
+      messageContent.className = "message-content";
+      messageContent.innerHTML = `
+        <div class="sender-name">${sender === "client" ? "Cliente" : "IPET"}</div>
+        <div class="message-text">${text}</div>
+      `;
+
+      if (sender === "ipet") {
+        messageBox.appendChild(messageContent);
+        messageBox.appendChild(avatar);
+      } else {
+        messageBox.appendChild(avatar);
+        messageBox.appendChild(messageContent);
+      }
+
+      chat.appendChild(messageBox);
+      input.value = "";
+      chat.scrollTop = chat.scrollHeight; // desce automaticamente
+    }
+
+    window.onload = () => {
+      document.getElementById("chat-messages").scrollTop = 99999;
+    };
+  </script>
+</body>
+</html>

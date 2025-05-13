@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu IPET</title>
+  <link rel="stylesheet" href="mensagem.css">
+  <link href="https://unpkg.com/lucide-static@0.304.0/icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="menu">
+<div class="header">
+  <div class="header-left">
+    <button class="back-button" onclick="history.back()">
+      <i data-lucide="arrow-left"></i>
+    </button>
+  </div>
+
+  <div class="header-center">
+    <div class="title-conversa">Conversas</div>
+  </div>
+
+  <div class="header-right">
+    <a href="menu.html">
+    <button class="settings-button">
+      <i data-lucide="settings"></i>
+    </button>
+    </a>
+  </div>
+</div>
+
+  <div class="menu-section">
+    <a href="cliente1.html" class="menu-item">
+      <i data-lucide="circle-user-round"></i>CLIENTE 1
+    </a>
+    <a href="cliente2.html" class="menu-item">
+      <i data-lucide="circle-user-round"></i>CLIENTE 2
+    </a>
+    <a href="cliente3.html" class="menu-item">
+      <i data-lucide="circle-user-round"></i>CLIENTE 3
+    </a>
+    <a href="cliente4.html" class="menu-item">
+      <i data-lucide="circle-user-round"></i>CLIENTE 4
+    </a>
+    <a href="cliente5.html" class="menu-item">
+      <i data-lucide="circle-user-round"></i>CLIENTE 5
+    </a>
+  </div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  
+  document.querySelectorAll('svg').forEach(function(icon) {
+  });
+</script>
+</body>
+</html>
