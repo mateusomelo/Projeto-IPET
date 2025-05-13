@@ -3,7 +3,6 @@ body {
   font-family: 'Lalezar', Arial, sans-serif;
   background-color: #58A0C6;
   color: #ffe7e7;
-  text-shadow: name; /* PS: Esse valor está incorreto — veja observação ao final */
 }
 
 .menu {
@@ -22,7 +21,6 @@ body {
   padding: 8px 0;
   color: #f0f0f0;
   text-decoration: none;
-  text-shadow: nome; /* Também incorreto */
 }
 
 .menu-item svg {
