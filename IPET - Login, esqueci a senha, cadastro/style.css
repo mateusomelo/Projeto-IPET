@@ -18,7 +18,7 @@ body {
   text-align: center;
 }
 
-/* Responsividade opcional para telas menores */
+
 @media (max-width: 400px) {
   .login-container {
     padding: 20px;
@@ -44,7 +44,7 @@ input {
   outline: none;
 }
 
-/* Destaque para campo em foco */
+
 input:focus {
   border-color: #4e54c8;
   box-shadow: 0 0 3px #4e54c8;
@@ -59,7 +59,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s;
+  
 }
 
 button:hover {
@@ -167,7 +167,7 @@ button:hover {
   transition: all 0.2s ease;
 }
 
-/* Efeito suave ao passar o mouse nos botões sociais */
+
 .social-login button:hover {
   opacity: 0.9;
   transform: scale(1.02);
